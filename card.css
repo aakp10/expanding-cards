@@ -1,0 +1,84 @@
+body{
+background:#eceef1;
+font family:serif;
+color:darken(#eceef1,70%);
+box-sizing:border-box;
+}
+
+.container{
+background:#fff;
+padding-bottom:20px;}
+.card{
+transition:all .2sec ease-in-out;
+
+
+}
+.cardInner{
+background:#eceef1;
+width:100%;
+font-size:4em;
+border-radius:20px;
+}
+
+.card .cardInner  .fa{font-size: 0.75em;
+      position: absolute;
+      top: 10px;
+      right: 15px;}
+
+.card  .cardInner:hover{
+
+cursor:pointer;
+background:#1abc9c;
+transform:scale(1.05);
+}
+ 
+.card .exp{
+background:#000;
+color:#fff;
+font-size:2em;
+
+border-radius:10px;}
+.isColl .cardInner :after{
+content:"";
+opacity:0;}
+
+.isColl .exp{
+max-height:0;
+min:height:0;
+overflow:hidden;
+margin-top:0;
+opacity:0;}
+
+
+
+.isExp .cardInner:after{
+content:"";
+opacity:1;
+
+}
+.isExp .exp {
+max-height:1000px;
+min:height:200px;
+overflow:visible;
+margin-top:30px;
+}
+
+.isInactive{
+pointer-events:none;
+opacity:0.5;}
+
+
+
+ .card:nth-of-type(3n+2) .exp {
+    margin-left: calc(-100% - 30px);
+  }
+  .card:nth-of-type(3n+3) .exp {
+    margin-left: calc(-200% - 60px);
+  }
+  .card:nth-of-type(3n+4) {
+    clear: left;
+  }
+  .exp {
+    width: calc(300% + 60px);
+  }
+
